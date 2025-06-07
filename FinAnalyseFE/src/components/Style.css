@@ -1,0 +1,146 @@
+.section {
+  margin-top: 1.5rem;
+  background: rgb(242, 239, 239);
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  border: 2px solid gray;
+}
+
+table th, table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  text-align: left;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  margin: 5px;
+  padding: 0.5rem 1rem;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.tab-btn.active {
+  background-color: #4287f5;
+  color: white;
+}
+
+.tab-content {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+/* MainPage.css */
+.layout-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar styling */
+.layout-container aside {
+  width: 260px; /* Adjust as needed */
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  padding: 16px;
+  overflow-y: auto;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+/* Main display styling */
+.layout-container > :last-child {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+.sidebar {
+  width: 260px;
+  background-color: #f8fafc;
+  padding: 20px;
+  border-right: 1px solid #e2e8f0;
+  height: 100vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1e293b;
+  border-bottom: 2px solid #cbd5e1;
+  padding-bottom: 8px;
+}
+
+.sidebar-group {
+  margin-bottom: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.sidebar-summary {
+  font-weight: 500;
+  padding: 10px 14px;
+  background-color: #e2e8f0;
+  cursor: pointer;
+  color: #0f172a;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-summary:hover {
+  background-color: #cbd5e1;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 8px 0 8px 16px;
+  margin: 0;
+  text-align: left;
+}
+
+.sidebar-button {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-align: left;
+  width: 100%;
+  transition: color 0.2s;
+}
+
+.sidebar-button:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.sidebar-message {
+  padding: 20px;
+  color: #64748b;
+}
