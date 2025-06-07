@@ -144,3 +144,9 @@ table th, table td {
   padding: 20px;
   color: #64748b;
 }
+
+.tab-panel-wrapper {
+  max-height: calc(100vh - 200px); 
+  overflow-y: auto;
+  padding-right: 8px; 
+}

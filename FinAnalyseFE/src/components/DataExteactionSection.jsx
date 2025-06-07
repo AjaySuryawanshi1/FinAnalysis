@@ -1,7 +1,8 @@
 import React ,{useEffect, useState}from 'react'
 import './Style.css'
+import FinancialAnalysisSection from './FinancialAnalysisSection';
 
-const DataExteactionSection = ({ data }) => {
+const DataExteactionSection = ({ data , finData}) => {
 
     const [activeTab,setActiveTab] = useState(null);
 
@@ -24,8 +25,14 @@ const DataExteactionSection = ({ data }) => {
                         {periodData.period_label || periodKey}
                     </button>
                 ))}
+                <button 
+                 className={`tab-btn ${activeTab === 'summary' ? 'active' : ''}`}
+                 onClick={() => setActiveTab('summary')}>
+                    Summary
+                </button>
             </div>
-            {periodEntries.map(([periodKey, periodData]) => (
+            <div className="tab-panel-wrapper">
+                {periodEntries.map(([periodKey, periodData]) => (
                 activeTab === periodKey && (
                 <div key={periodKey} className="section">
                     <h3>{periodData.period_label || periodKey}</h3>
@@ -168,7 +175,13 @@ const DataExteactionSection = ({ data }) => {
                 </div>
                 )
             ))}
-
+            {activeTab === 'summary' && (
+          <div className="section">
+            <FinancialAnalysisSection data={finData} />
+          </div>
+        )}
+            </div>
+            
         </>
     )
 }
